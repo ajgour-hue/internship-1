@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
 import { useSwap } from "../hook/useSwap";
+import { getOptimizedImageUrl } from "../../shared/image.util.js";
 
 const SentSwaps = () => {
 
@@ -179,7 +180,7 @@ const SentSwaps = () => {
                                                 {request.offeredItem?.images?.[0] ? (
 
                                                     <img
-                                                        src={request.offeredItem.images[0]}
+                                                        src={getOptimizedImageUrl(request.offeredItem.images[0], 200, 250)}
                                                         alt={request.offeredItem.title}
                                                         className="w-full h-full object-cover"
                                                     />
@@ -229,7 +230,7 @@ const SentSwaps = () => {
                                                 {request.requestedItem?.images?.[0] ? (
 
                                                     <img
-                                                        src={request.requestedItem.images[0]}
+                                                        src={getOptimizedImageUrl(request.requestedItem.images[0], 200, 250)}
                                                         alt={request.requestedItem.title}
                                                         className="w-full h-full object-cover"
                                                     />

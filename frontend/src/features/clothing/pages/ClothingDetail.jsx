@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { useClothing } from "../hook/useClothing";
 import { useSwap } from "../hook/useSwap";
 import { useSelector } from "react-redux";
+import { getOptimizedImageUrl } from "../../shared/image.util.js";
 
 const ClothingDetail = () => {
 
@@ -383,7 +384,7 @@ const ClothingDetail = () => {
                                     >
 
                                         <img
-                                            src={image}
+                                            src={getOptimizedImageUrl(image, 800, 1000)}
                                             alt={`${clothing.title} ${index + 1}`}
                                             className="w-full h-full object-cover"
                                         />
@@ -538,7 +539,7 @@ const ClothingDetail = () => {
                                         {clothing.owner.profileImage ? (
 
                                             <img
-                                                src={clothing.owner.profileImage}
+                                                src={getOptimizedImageUrl(clothing.owner.profileImage, 100, 100)}
                                                 alt={
                                                     clothing.owner.fullname
                                                 }
@@ -742,9 +743,7 @@ const ClothingDetail = () => {
                                                             {item.images?.[0] ? (
 
                                                                 <img
-                                                                    src={
-                                                                        item.images[0]
-                                                                    }
+                                                                    src={getOptimizedImageUrl(item.images[0], 200, 250)}
                                                                     alt={
                                                                         item.title
                                                                     }

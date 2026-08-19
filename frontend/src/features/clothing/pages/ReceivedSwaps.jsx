@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
 import { useSwap } from "../hook/useSwap";
+import { getOptimizedImageUrl } from "../../shared/image.util.js";
 
 const ReceivedSwaps = () => {
 
@@ -237,7 +238,7 @@ const ReceivedSwaps = () => {
                                                     {request.requester?.profileImage ? (
 
                                                         <img
-                                                            src={request.requester.profileImage}
+                                                            src={getOptimizedImageUrl(request.requester.profileImage, 100, 100)}
                                                             alt={request.requester.fullname}
                                                             className="w-full h-full object-cover"
                                                         />
@@ -297,7 +298,7 @@ const ReceivedSwaps = () => {
                                                     {request.offeredItem?.images?.[0] ? (
 
                                                         <img
-                                                            src={request.offeredItem.images[0]}
+                                                            src={getOptimizedImageUrl(request.offeredItem.images[0], 200, 250)}
                                                             alt={request.offeredItem.title}
                                                             className="w-full h-full object-cover"
                                                         />
@@ -347,7 +348,7 @@ const ReceivedSwaps = () => {
                                                     {request.requestedItem?.images?.[0] ? (
 
                                                         <img
-                                                            src={request.requestedItem.images[0]}
+                                                            src={getOptimizedImageUrl(request.requestedItem.images[0], 200, 250)}
                                                             alt={request.requestedItem.title}
                                                             className="w-full h-full object-cover"
                                                         />

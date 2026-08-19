@@ -31,6 +31,7 @@ async function sendTokenResponse(user, res, message) {
             contact: user.contact,
             fullname: user.fullname,
             role: user.role,
+            profileImage: user.profileImage,
             location: user.location,
             
         },

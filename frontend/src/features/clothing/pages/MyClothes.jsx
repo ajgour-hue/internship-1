@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { useClothing } from "../hook/useClothing";
+import { getOptimizedImageUrl } from "../../shared/image.util.js";
 
 const MyClothes = () => {
     const {
@@ -189,7 +190,7 @@ const MyClothes = () => {
 
                                                 {clothing.images?.[0] ? (
                                                     <img
-                                                        src={clothing.images[0]}
+                                                        src={getOptimizedImageUrl(clothing.images[0], 400, 500)}
                                                         alt={clothing.title}
                                                         className="w-full h-full object-cover hover:scale-105 transition duration-500"
                                                     />

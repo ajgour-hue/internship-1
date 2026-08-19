@@ -14,6 +14,7 @@ import SentSwaps from "../features/clothing/pages/SentSwaps.jsx";
 import ReceivedSwaps from "../features/clothing/pages/ReceivedSwaps.jsx";
 import Notifications from "../features/clothing/pages/Notifications.jsx";
 import Chat from "../features/clothing/pages/Chat.jsx";
+import Profile from "../features/auth/pages/Profile.jsx";
 import AppLayout from "./AppLayout.jsx";
 
 
@@ -91,6 +92,11 @@ export const routes = createBrowserRouter([
             {
                 path: "/notifications",
                 element: <Notifications />,
+            },
+
+            {
+                path: "/profile",
+                element: <Profile />,
             },
 
         ],

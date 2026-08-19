@@ -6,6 +6,7 @@ import React, {
 
 import { useSelector } from "react-redux";
 import { io } from "socket.io-client";
+import { getOptimizedImageUrl } from "../../shared/image.util.js";
 
 import { useConversation } from "../hook/useConversation.js";
 
@@ -586,7 +587,7 @@ const Chat = () => {
 
                                                         <img
                                                             src={
-                                                                otherUser.profileImage
+                                                                getOptimizedImageUrl(otherUser.profileImage, 100, 100)
                                                             }
                                                             alt=""
                                                             className="
@@ -777,7 +778,7 @@ const Chat = () => {
 
                                                         <img
                                                             src={
-                                                                otherUser.profileImage
+                                                                getOptimizedImageUrl(otherUser.profileImage, 100, 100)
                                                             }
                                                             alt=""
                                                             className="

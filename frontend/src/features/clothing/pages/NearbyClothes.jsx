@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { useClothing } from "../hook/useClothing";
+import { getOptimizedImageUrl } from "../../shared/image.util.js";
 
 const NearbyClothes = () => {
     const navigate = useNavigate();
@@ -235,7 +236,7 @@ const NearbyClothes = () => {
                                                         {clothing.images?.[0] ? (
 
                                                             <img
-                                                                src={clothing.images[0]}
+                                                                src={getOptimizedImageUrl(clothing.images[0], 400, 500)}
                                                                 alt={clothing.title}
                                                                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
                                                             />
@@ -302,7 +303,7 @@ const NearbyClothes = () => {
                                                                     {clothing.owner.profileImage ? (
 
                                                                         <img
-                                                                            src={clothing.owner.profileImage}
+                                                                            src={getOptimizedImageUrl(clothing.owner.profileImage, 100, 100)}
                                                                             alt=""
                                                                             className="w-full h-full object-cover"
                                                                         />

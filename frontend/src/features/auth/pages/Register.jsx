@@ -65,7 +65,7 @@ const Register = () => {
             <div className="hidden lg:flex lg:w-1/2 relative items-center justify-center overflow-hidden bg-neutral-100 border-r border-neutral-200">
 
                 <img
-                    src="/snitch_editorial_warm.png"
+                    src="/snitch_editorial_warm.webp"
                     alt="FashionKart Fashion Editorial"
                     className="absolute inset-0 w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-[20s] ease-out"
                 />

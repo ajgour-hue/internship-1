@@ -1,6 +1,7 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import compression from "compression";
 import authRouter from "./routes/auth.routes.js";
 import morgan from "morgan";
 import passport from "passport";
@@ -12,6 +13,8 @@ import messageRouter from "./routes/message.routes.js";
 import notificationRouter from "./routes/notification.routes.js";
 
 const app = express();
+
+app.use(compression());
 
 // CORS
 app.use(
