@@ -5,7 +5,7 @@ const clothingApiInstance = axios.create({
 
     baseURL: `${
         import.meta.env.VITE_BACKEND_URL ||
-        "http://localhost:3000"
+        "https://internship-1-vafq.onrender.com"
     }/api/clothes`,
 
     withCredentials: true,

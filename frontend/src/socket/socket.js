@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 
 const socket = io(
-    "http://localhost:3000",
+    "https://internship-1-vafq.onrender.com",
     {
         withCredentials: true,
         autoConnect: false

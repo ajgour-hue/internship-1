@@ -3,7 +3,7 @@ import axios from "axios";
 const notificationApiInstance = axios.create({
     baseURL: `${
         import.meta.env.VITE_BACKEND_URL ||
-        "http://localhost:3000"
+        "https://internship-1-vafq.onrender.com"
     }/api/notifications`,
     withCredentials: true,
 });
